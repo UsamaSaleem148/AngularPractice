@@ -1,1 +1,19 @@
 <p>Congratulations! You have won the game.</p>
+
+<input type="text" class="form-control" [(ngModel)]="userName" />
+
+<h5>{{ userName }}</h5>
+
+<button type="button" (click)="clear()" [disabled]="!userName">Click Me</button>
+
+<hr />
+
+<button type="button" (click)="displayPass()">Display Details</button>
+<p *ngIf="displayIt">Secret Password: 'Tuna'</p>
+<div
+  *ngFor="let item of logItems; let i = index"
+  [ngStyle]="{backgroundColor : i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'isWhite' : i >= 4}"
+>
+  {{ item }}
+</div>
