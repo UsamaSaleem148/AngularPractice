@@ -6,4 +6,24 @@ import { Component } from "@angular/core";
     styleUrls: ['./success-alert.component.css']
 
 })
-export class successAlert { }
+
+export class successAlert { 
+    userName = ""
+
+    displayIt = false
+
+    logItems = []
+
+    isEmpty = true
+
+    counter = 0
+
+    clear(){
+        this.userName = ""
+    }
+
+    displayPass(){
+        this.displayIt = !this.displayIt
+        this.logItems.push(this.counter++)
+    }
+ }
